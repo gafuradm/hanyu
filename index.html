@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>谢晋伦 - 数字时代的岳飞精神</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Основные стили */
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://source.unsplash.com/random/1600x900/?china,great-wall') no-repeat center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        .btn {
+            background: #e74c3c;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #c0392b;
+            transform: translateY(-3px);
+        }
+        
+        /* Секции */
+        section {
+            padding: 60px 20px;
+        }
+        
+        .story {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .ai-chat {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+        }
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero-секция -->
+    <section class="hero">
+        <div>
+            <h1>谢晋伦 (Damiruly Gafur)</h1>
+            <p>数字时代的岳飞精神 — 用科技搭建文化桥梁</p>
+            <a href="#story" class="btn">探索我的故事</a>
+        </div>
+    </section>
+    
+    <!-- Ваша история -->
+    <section id="story" class="story">
+        <h2>我的征程</h2>
+        <p>2024年，我像岳飞一样在数字世界刻下"精忠报国"的信念。</p>
+        <p>从零开始：</p>
+        <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+            <li>9个月通过HSK6级</li>
+            <li>开发拥有8万用户的AI汉语助手</li>
+            <li>获得清华大学预录取</li>
+            <li>成为兰州交通大学留学生代表</li>
+        </ul>
+        <p>我的格言：<strong>"行百里者半九十"</strong></p>
+    </section>
+    
+    <!-- AI-чат -->
+    <section class="ai-chat">
+        <h2>AI汉语助手</h2>
+        <p>试用我的GPT-4汉语学习机器人 (无需API密钥):</p>
+        <div id="chat-container" style="
+            background: white; 
+            color: black; 
+            max-width: 600px; 
+            margin: 20px auto; 
+            padding: 20px;
+            border-radius: 10px;
+            height: 300px;
+            overflow-y: auto;
+        ">
+            <div id="chat-messages"></div>
+            <input 
+                type="text" 
+                id="user-input" 
+                placeholder="输入你的问题..." 
+                style="
+                    width: 100%;
+                    padding: 10px;
+                    margin-top: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                "
+            >
+            <button onclick="sendMessage()" class="btn" style="margin-top: 10px;">发送</button>
+        </div>
+        <p style="margin-top: 20px;">扫描二维码访问完整版:</p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://chat.openai.com" 
+             alt="ChatGPT QR码" 
+             style="margin: 10px auto; display: block;">
+    </section>
+    
+    <!-- Галерея -->
+    <section class="story">
+        <h2>我的书法作品</h2>
+        <div class="gallery">
+            <img src="https://source.unsplash.com/random/300x400/?chinese,calligraphy,1" alt="书法作品 1">
+            <img src="https://source.unsplash.com/random/300x400/?chinese,calligraphy,2" alt="书法作品 2">
+            <img src="https://source.unsplash.com/random/300x400/?chinese,calligraphy,3" alt="书法作品 3">
+        </div>
+    </section>
+    
+    <!-- Контакты -->
+    <footer>
+        <p>© 2025 谢晋伦 - 汉语桥全球总冠军候选人</p>
+        <p>联系我: 
+            <a href="mailto:your-email@example.com" style="color: #e74c3c;">email</a> | 
+            <a href="https://github.com/yourprofile" style="color: #e74c3c;">GitHub</a>
+        </p>
+    </footer>
+
+    <script>
+        // Простой чат-бот (без API ключа)
+        function sendMessage() {
+            const userInput = document.getElementById('user-input').value;
+            const chatBox = document.getElementById('chat-messages');
+            
+            if (!userInput) return;
+            
+            // Добавляем вопрос пользователя
+            chatBox.innerHTML += `<div style="text-align: right; margin: 10px;"><strong>你:</strong> ${userInput}</div>`;
+            
+            // Имитируем ответ ИИ
+            const responses = [
+                "学习汉语需要持之以恒，就像谢晋伦一样！",
+                "这个问题的答案可以在HSK5级教材第128页找到。",
+                "岳飞曾说：" + '"文官不爱钱，武官不怕死，天下太平矣"。',
+                "我推荐你使用" + '"汉语桥"APP练习发音。',
+                "谢晋伦用了9个月通过HSK6，你能做到吗？"
+            ];
+            const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+            
+            setTimeout(() => {
+                chatBox.innerHTML += `<div style="text-align: left; margin: 10px;"><strong>AI助手:</strong> ${randomResponse}</div>`;
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }, 1000);
+            
+            document.getElementById('user-input').value = '';
+        }
+        
+        // Отправка сообщения по Enter
+        document.getElementById('user-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>
